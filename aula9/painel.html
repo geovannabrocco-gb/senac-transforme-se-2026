@@ -1,0 +1,56 @@
+<html>
+
+    <head>
+         <title>Meu Formulário</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylle.scss">
+
+    </head>
+    <body>
+        <nav class="flex items-center px-4 py-2 shadow-lg fixed w-full bg-purple">
+        <a class="mr-4 px-4 bg-primary hover:shadow-inner rounded text-white ml-auto shadow-lg" href="index.html">Voltar</a>
+        </nav>
+
+        <main>
+            <section>
+                <div class="text-center max-w-lg mx-auto py-4">
+    <h3 id= "hi"></h3>
+<h2>Meu formuário</h2>
+<p>Preencha as informações abaixo:</p>
+<form id="formRegister">
+
+    <article class="mt-4 mb-4">
+    Nome: <input id="iName" type="text" placeholder="Digite seu nome completo"/>
+    </article>
+    <article class="mt-4 mb-4">
+    Email: <input id= "iEmail" type="email" placeholder="Digite seu melhor email"/>
+    </article >
+    <article>
+    Senha: <input id= "iPass" type="password" placeholder="Letra maiuscula e números"/> 
+    </article>
+    <article class="mt-4 mb-4">
+    Data de nascimento: <input id= "iBirth" type="date"/>
+    </article>
+    <article>
+    <button class="bg-primary" type="submit">Salvar</button>
+    </article>
+    
+</form> 
+
+    <h2>Resposta</h2>
+<pre id="pResponse"></pre>
+
+
+<pre id="list"></pre>
+
+</div>
+</section>
+</main>
+<script src="user.js"></script>
+
+</body>
+</html>
