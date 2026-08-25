@@ -397,7 +397,7 @@ $variant: (
    ========================================================= */
 
 $text-alignments: (
-    left: left,
+    left: left,h-fu
     center: center,
     right: right,
     justify: justify
@@ -434,6 +434,10 @@ $text-alignments: (
 
 .w-full {
     width: 100%;
+}
+
+.h-full {
+    height: 100%;
 }
 
 
