@@ -32,6 +32,12 @@ formR?.addEventListener("submit", (e) => {
     localStorage.setItem("users", JSON.stringify(users))
 })
 
+ const modalRegister = document.getElementById("modalRegister");
+    modalRegister.classList.remove("flex");
+    modalRegister.classList.add("hidden");
+    window.location.href = "painel.html"
+
+
 var formL = document.getElementById("formLogin");
 formL?.addEventListener("submit", (e) => {
     e.preventDefault();
