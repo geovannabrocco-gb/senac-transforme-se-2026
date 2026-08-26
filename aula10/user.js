@@ -6,8 +6,11 @@ var hi = document.getElementById("hi");
 if (hi && usuarioLogado) hi.innerHTML = "Olá " + usuarioLogado?.nome
 
 var list = document.getElementById("list") 
-if (list)
-    list.innerHTML = JSON.stringify(users,null,4)
+if (list){
+    users.forEach((u)=> {
+        console.log(u)
+    });
+}
 
 
 var formR = document.getElementById("formRegister");

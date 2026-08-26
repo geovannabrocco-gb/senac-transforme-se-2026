@@ -18,41 +18,57 @@
     </nav>
 
     <main>
-        <section>
-            <div class="h-full flex">
-                <div id="modalRegister" class="fixed p-5 bg-about rounted-lg shadow-md column hidden">
-                    <a id="btClose" class="bg-prices absolute top-0 right-0 px-2 rounded-full">x</a>
-                    <h3 id="hi"></h3>
-                    <h2>Meu formuário</h2>
-                    <p>Preencha as informações abaixo:</p>
-                    <form id="formRegister">
-
-                        <article class="mt-4 mb-4">
-                            Nome: <input id="iName" type="text" placeholder="Digite seu nome completo" />
-                        </article>
-                        <article class="mt-4 mb-4">
-                            Email: <input id="iEmail" type="email" placeholder="Digite seu melhor email" />
-                        </article>
-                        <article>
-                            Senha: <input id="iPass" type="password" placeholder="Letra maiuscula e números" />
-                        </article>
-                        <article class="mt-4 mb-4">
-                            Data de nascimento: <input id="iBirth" type="date" />
-                        </article>
-                        <article>
-                            <button class="bg-primary" type="submit">Salvar</button>
-                        </article>
-
-                    </form>
-                </div>
-                <h2>Resposta</h2>
-                <pre id="pResponse"></pre>
 
 
-                <pre id="list"></pre>
-                <a id="addUser"class="rounded-full bg-primary text-white px-4 py-3 fixed bottom-0 right-0"> + </a>
+        <div id="modalRegister" class="fixed top-0 right-0 bottom-0 left-0 hidden items-center justify-center bg-black-50 z-50">
+
+            <div class="relative max-w-md w-full p-5 bg-about rouded-1g shadow-md flex column">
+
+                <a id="btClose" class="bg-prices absolute top-0 right-0 px-2 rounded-full cursor-pointer">x</a>
+
+                <h3 id="hi"></h3>
+                <h2>Meu formuário</h2>
+                <p>Preencha as informações abaixo:</p>
+                <form id="formRegister">
+
+                    <article class="mt-4 mb-4">
+                        Nome: <input id="iName" type="text" placeholder="Digite seu nome completo" />
+                    </article>
+                    <article class="mt-4 mb-4">
+                        Email: <input id="iEmail" type="email" placeholder="Digite seu melhor email" />
+                    </article>
+                    <article>
+                        Senha: <input id="iPass" type="password" placeholder="Letra maiuscula e números" />
+                    </article>
+                    <article class="mt-4 mb-4">
+                        Data de nascimento: <input id="iBirth" type="date" />
+                    </article>
+                    <article>
+                        <button class="bg-primary" type="submit">Salvar</button>
+                    </article>
+
+                </form>
             </div>
-        </section> 
+        </div>
+
+        <h2>Resposta</h2>
+        <pre id="pResponse"></pre>
+        <pre id="list"></pre>
+
+        <table>
+            <thead>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Ações</th>
+            </thead>
+            <tbody id="listUser" >
+                
+            </tbody>
+        </table>
+
+        <a id="addUser" class="rounded-full bg-primary text-white px-4 py-3 fixed bottom-0 right-0"> + </a>
+
+
     </main>
     <script src="user.js"></script>
     <script src="painel.js"></script>
