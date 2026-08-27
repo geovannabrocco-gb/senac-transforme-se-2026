@@ -1043,4 +1043,12 @@ a {
   z-index: 50;
 }
 
+.font-primary {
+  font-family: "DynaPuff", system-ui, normal;
+}
+
+.font-secondary {
+  font-family: "Lucida Sans", "Verdana", sans-serif;
+}
+
 /*# sourceMappingURL=style.css.map */

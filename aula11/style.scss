@@ -745,3 +745,14 @@ $gaps: (
 .z-50 {
     z-index: 50;
 }
+
+$fonts: (
+    "primary":$font-primary,
+    "secondary":$font-secondary
+);
+
+@each $name, $font in $fonts {
+    .font-#{$name}{
+        font-family: $font;
+    }
+}
