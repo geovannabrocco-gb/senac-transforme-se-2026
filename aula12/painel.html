@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>Meu Formulário</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylle.scss">
+
+</head>
+
+<body>
+    <nav class="flex items-center px-4 py-2 shadow-lg fixed w-full bg-purple">
+        <a class="mr-4 px-4 bg-primary hover:shadow-inner rounded text-white ml-auto shadow-lg"
+            href="index.html">Voltar</a>
+    </nav>
+
+    <main>
+
+
+        <div id="modalRegister" class="fixed top-0 right-0 bottom-0 left-0 hidden items-center justify-center bg-black-50 z-50">
+
+            <div class="relative max-w-md w-full p-5 bg-about rouded-1g shadow-md flex column">
+
+                <a id="btClose" class="bg-prices absolute top-0 right-0 px-2 rounded-full cursor-pointer">x</a>
+
+                <h3 id="hi"></h3>
+                <h2>Meu formuário</h2>
+                <p>Preencha as informações abaixo:</p>
+                <form id="formRegister">
+
+                    <article class="mt-4 mb-4">
+                        Nome: <input id="iName" type="text" placeholder="Digite seu nome completo" />
+                    </article>
+                    <article class="mt-4 mb-4">
+                        Email: <input id="iEmail" type="email" placeholder="Digite seu melhor email" />
+                    </article>
+                    <article>
+                        Senha: <input id="iPass" type="password" placeholder="Letra maiuscula e números" />
+                    </article>
+                    <article class="mt-4 mb-4">
+                        Data de nascimento: <input id="iBirth" type="date" />
+                    </article>
+                    <article>
+                        <button class="bg-primary" type="submit">Salvar</button>
+                    </article>
+
+                </form>
+            </div>
+        </div>
+
+        <h2>Resposta</h2>
+
+
+        <table>
+            <thead>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Ações</th>
+            </thead>
+            <tbody id="listUser" class= "font-secondary">
+                
+            </tbody>
+        </table>
+
+        <a id="addUser" class="rounded-full bg-primary text-white px-4 py-3 fixed bottom-0 right-0"> + </a>
+
+
+    </main>
+    <script src="user.js"></script>
+    <script src="painel.js"></script>
+
+</body>
+
+</html>
