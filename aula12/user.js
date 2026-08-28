@@ -5,29 +5,43 @@ var usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado")) || {};
 var hi = document.getElementById("hi");
 if (hi && usuarioLogado) hi.innerHTML = "Olá " + usuarioLogado?.nome
 
-var list = document.getElementById("listUser") 
-if (list){
+function createButton(text, classes, i) {
+    let bt = document.createElement("a");
+    bt.innerHTML = text;
+    classes.forEach(c =>  {
+        bt.classList.add (c);
+    })
+
+    bt.classList.add(c);
+    bt.classList.add("cursor-pointer");
+    bt.classList.add("px-3");
+    bt.classList.add("mx-4");
+    bt.classList.add("hover:shadow");
+    bt.classList.add("shadow-md");
+    bt.classList.add("text-white");
+    bt.classList.add("rouded-full");
+
+    bt.dataset.id = i;
+    return bt;
+}
+var list = document.getElementById("listUser")
+if (list) {
     let i = 0;
-    users.forEach((u)=> {
-        let tdName= document.createElement("td");
-        tdName.innerHTML= u.nome;
-        let tdEmail= document.createElement("td");
-        tdEmail.innerHTML= u.email;
-        let tdAction= document.createElement("td");
-        let btV = document.createElement("a");
-        btV.innerHTML = "V";
-        btV.classList.add("Show");
-        btV.id = i;
-        tdAction.appendChild(btV);
+    users.forEach((u) => {
+        let tdName = document.createElement("td");
+        tdName.innerHTML = u.nome;
+        let tdEmail = document.createElement("td");
+        tdEmail.innerHTML = u.email;
+
+        let tdAction = document.createElement("td");
+        tdAction.appendChild (createButton("V",["show","bg-primary"],i));
+        tdAction.appendChild (createButton("X",["remove","bg-red"],i));
+        
 
         let span = document.createElement("span");
         span.innerHTML = " - ";
         tdAction.appendChild(span);
-
-        let btR = document.createElement("a");
-        btR.innerHTML = "X";
-        btR.classList.add("Remove");
-        tdAction.appendChild(btR);
+        tdAction.appendChild(createButton("x", "remove", i));
 
         let tr = document.createElement("tr");
         tr.appendChild(tdName);
@@ -44,8 +58,18 @@ if (list){
 var botoesV = document.querySelectorAll(".show");
 botoesV.forEach((b) => {
     b.addEventListener("click", () => {
-        const id = b.id;
+        const id = b.dataset.id;
         b.innerHTML = users[id].nascimento;
+    })
+})
+
+var botoesR = document.querySelectorAll(".remove");
+botoesR.forEach((b) => {
+    b.addEventListener("click", () => {
+        const id = b.dataset.id;
+        users.splice(id, 1);
+        localStorage.setItem("users", JSON.stringify(users))
+        window.location.href = "painel.html"
     })
 })
 
@@ -71,7 +95,7 @@ formR?.addEventListener("submit", (e) => {
     localStorage.setItem("users", JSON.stringify(users))
 
 
- const modalRegister = document.getElementById("modalRegister");
+    const modalRegister = document.getElementById("modalRegister");
     modalRegister.classList.remove("flex");
     modalRegister.classList.add("hidden");
     window.location.href = "painel.html"
@@ -82,25 +106,25 @@ var formL = document.getElementById("formLogin");
 formL?.addEventListener("submit", (e) => {
     e.preventDefault();
 
-     let email = document.getElementById("iEmailLogin").value;
-     let pass = document.getElementById("iPassLogin").value;
+    let email = document.getElementById("iEmailLogin").value;
+    let pass = document.getElementById("iPassLogin").value;
 
     let user = users.find(u => {
         return u.email == email
     })
 
-    if(!user){
+    if (!user) {
         console.log("usúario não encontrado")
-    return
-    } 
+        return
+    }
 
-    if(user.senha == pass){
+    if (user.senha == pass) {
         console.log("usuario logado")
         localStorage.setItem("usuarioLogado", JSON.stringify(user))
 
-        
+
         window.location.href = "painel.html"
-    }else{
+    } else {
         console.log("senha invalida")
     }
 
