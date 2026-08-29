@@ -15,6 +15,7 @@ $color-blue: #7eadf5;
 $color-about: #acd4f9;
 $color-feature: #acf9c0;
 $color-prices: #f2f9ac;
+$color-red: #FF0000;
 
 
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
@@ -38,7 +39,8 @@ $backgrounds: (
     "prices": $color-prices,
     "purple": $color-purple,
     "blue": $color-blue,
-    "black-50":rgba(0,0,0,0.5)
+    "black-50":rgba(0,0,0,0.5),
+    "red": $color-red
 );
 
 $text-colors: (

@@ -12,7 +12,6 @@ function createButton(text, classes, i) {
         bt.classList.add (c);
     })
 
-    bt.classList.add(c);
     bt.classList.add("cursor-pointer");
     bt.classList.add("px-3");
     bt.classList.add("mx-4");
@@ -37,11 +36,6 @@ if (list) {
         tdAction.appendChild (createButton("V",["show","bg-primary"],i));
         tdAction.appendChild (createButton("X",["remove","bg-red"],i));
         
-
-        let span = document.createElement("span");
-        span.innerHTML = " - ";
-        tdAction.appendChild(span);
-        tdAction.appendChild(createButton("x", "remove", i));
 
         let tr = document.createElement("tr");
         tr.appendChild(tdName);

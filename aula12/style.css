@@ -530,6 +530,10 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.bg-red {
+  background-color: #FF0000;
+}
+
 /* =========================================================
    13. BACKGROUND + HOVER
 
@@ -581,6 +585,10 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.hover\:bg-red:hover {
+  background-color: #FF0000;
+}
+
 /* =========================================================
    14. BACKGROUND + FOCUS
    ========================================================= */
@@ -624,6 +632,10 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.focus\:bg-red:focus {
+  background-color: #FF0000;
+}
+
 /* =========================================================
    15. BACKGROUND + ACTIVE
    ========================================================= */
@@ -665,6 +677,10 @@ a {
 
 .active\:bg-black-50:active {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.active\:bg-red:active {
+  background-color: #FF0000;
 }
 
 /* =========================================================
